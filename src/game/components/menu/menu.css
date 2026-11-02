@@ -1,0 +1,38 @@
+.menu-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+
+  z-index: 10;
+}
+
+.menu-overlay h1 {
+  color: #4fd1e0;
+  font-size: 3rem;
+}
+
+.menu-overlay p {
+  color: white;
+}
+
+.menu-overlay button {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4fd1e0;
+  color: #0b1024;
+
+  cursor: pointer;
+  font-weight: bold;
+}

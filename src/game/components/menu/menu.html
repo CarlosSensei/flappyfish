@@ -1,0 +1,17 @@
+
+@if (!engine.jugando() && !engine.terminado()) {
+
+  <div class="menu-overlay">
+
+    <h1>FLAPPY FISH</h1>
+
+    <p>Mejor puntuación: {{ engine.record() }}</p>
+
+    <p>Pulsa PLAY o espacio para comenzar</p>
+
+    <button (click)="start()">
+      PLAY
+    </button>
+
+  </div>
+}

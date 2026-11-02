@@ -1,0 +1,29 @@
+@if(engine.terminado()) {
+
+  <div class="game-over-overlay">
+
+    <div class="game-over-card">
+
+      <h2>GAME OVER</h2>
+
+      <p>Puntos: {{ engine.puntos() }}</p>
+      <p>Récord: {{ engine.record() }}</p>
+
+      <button (click)="retry()">
+        REINTENTAR
+      </button>
+
+    </div>
+
+  </div>
+
+}
+
+@if(engine.puntos() >= engine.record() && engine.puntos() > 0){
+
+  <p class="new-record">
+    🏆 NUEVO RÉCORD
+  </p>
+
+}
+

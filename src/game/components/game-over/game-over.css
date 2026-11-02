@@ -1,0 +1,83 @@
+:host {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.game-over-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+
+    pointer-events: all;
+}
+
+.game-over-card {
+
+    width: min(320px, 90vw);
+
+    padding: 2rem;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    background: #102746;
+
+    border: 2px solid #4fd1e0;
+
+    box-shadow:
+        0 0 20px rgba(79, 209, 224, 0.5);
+
+    animation: gameOverPop .3s ease-out;
+}
+
+.game-over-card h2 {
+    color: #ff6fb5;
+    margin-bottom: 1rem;
+}
+
+.game-over-card p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.game-over-card button {
+
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4fd1e0;
+    color: #0b1024;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: transform .2s ease;
+}
+
+.game-over-card button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes gameOverPop {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

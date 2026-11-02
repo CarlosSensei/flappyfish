@@ -1,0 +1,17 @@
+<div class="hud">
+
+  <div class="score">
+      {{ engine.puntos() }}
+  </div>
+
+  <div
+    class="level"
+    [class.level-2]="engine.nivel === 2"
+    [class.level-3]="engine.nivel === 3"
+    [class.level-4]="engine.nivel === 4">
+
+    Level {{ engine.nivel }}
+
+  </div>
+
+</div>
